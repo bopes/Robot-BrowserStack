@@ -1,7 +1,7 @@
 *** Variables ***
 ${SiteUrl}        http://www.google.com
 ${SearchTerm}     BrowserStack
-${SearchPageTitle}    ${SearchTerm} - Google Searchyfmujyfmjv
+${SearchPageTitle}    ${SearchTerm} - Google Search
 ${Delay}          5s
 ${NAME}        Simple Google Search
 
