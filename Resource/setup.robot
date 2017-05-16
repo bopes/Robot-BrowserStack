@@ -2,17 +2,11 @@
 Library           Selenium2Library
 
 *** Variables ***
-${Browser}        Firefox
-${SiteUrl}        http://www.google.com
-${SearchTerm}     BrowserStack
-${SearchPageTitle}    ${SearchTerm} - Google Search
-${Delay}          5s
 ${BS_User}    %{BROWSERSTACK_USERNAME}
 ${BS_Key}     %{BROWSERSTACK_ACCESS_KEY}
 ${RemoteUrl}    http://${BS_User}:${BS_Key}@hub.browserstack.com/wd/hub
 ${PROJECT}     AirBnB demo
 ${BUILD}       [robot] first test
-${NAME}        Simple Google Search
 
 *** Keywords ***
 Open Google

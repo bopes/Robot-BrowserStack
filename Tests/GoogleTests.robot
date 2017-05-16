@@ -1,13 +1,16 @@
-*** Settings ***
-Resource  ../Resource/setup.robot
-Suite Teardown    Close Browser
-Force Tags    BrowserStack
+*** Variables ***
+${SiteUrl}        http://www.google.com
+${SearchTerm}     BrowserStack
+${SearchPageTitle}    ${SearchTerm} - Google Searchyfmujyfmjv
+${Delay}          5s
+${NAME}        Simple Google Search
 
-*** Test Cases ***
+*** Keywords ***
 Should Navigate To Google And Search For BrowserStack
-	  Open Google  BROWSER=Chrome  BROWSER_VERSION=50.0  OS=Windows  OS_VERSION=7
+    [Arguments]   ${BROWSER}  ${BROWSER_VERSION}  ${OS}  ${OS_VERSION}
+	  Open Google  BROWSER=${BROWSER}  BROWSER_VERSION=${BROWSER_VERSION}  OS=${OS}  OS_VERSION=${OS_VERSION}
 		Enter Search Term
 	  Click Submit
 	  sleep    ${Delay}
 	  Check Title
-	  [Teardown]    Close Browser
+	  Close Browser
